@@ -1,1 +1,1 @@
-# motion2coach-public
+# Motion2Coach
