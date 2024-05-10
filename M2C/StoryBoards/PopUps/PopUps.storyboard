@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="St9-kK-LsJ">
+            <objects>
+                <navigationController id="BJ1-4g-qx4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FwG-7T-KIe">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="E8D-HS-eX2" kind="relationship" relationship="rootViewController" id="kHH-I6-FM2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C10-7C-ftS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1935" y="98"/>
+        </scene>
+        <!--CalendarVC-->
+        <scene sceneID="RWX-Vl-3Yw">
+            <objects>
+                <viewController storyboardIdentifier="CalendarVC" id="E8D-HS-eX2" customClass="CalendarVC" customModule="M2C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhY-MM-oGF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N83-Xi-MFh" customClass="CalendarView" customModule="HorizonCalendar">
+                                <rect key="frame" x="0.0" y="493" width="414" height="403"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S4Z-A0-46k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N83-Xi-MFh" firstAttribute="leading" secondItem="dhY-MM-oGF" secondAttribute="leading" id="LEX-rq-Lk8"/>
+                            <constraint firstItem="N83-Xi-MFh" firstAttribute="height" secondItem="dhY-MM-oGF" secondAttribute="height" multiplier="0.45" id="ioD-LZ-Ne0"/>
+                            <constraint firstAttribute="trailing" secondItem="N83-Xi-MFh" secondAttribute="trailing" id="py3-M1-62W"/>
+                            <constraint firstAttribute="bottom" secondItem="N83-Xi-MFh" secondAttribute="bottom" id="u1e-72-Tmu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WxD-8l-BAx"/>
+                    <connections>
+                        <outlet property="calendarView" destination="N83-Xi-MFh" id="1Ku-pp-m1a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7a-Lw-GcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1113" y="98"/>
+        </scene>
+        <!--Gif View Controller-->
+        <scene sceneID="acF-ng-Iak">
+            <objects>
+                <viewController storyboardIdentifier="GifViewController" id="eO1-Nf-NOt" customClass="GifViewController" customModule="M2C" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6H-5j-14f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xO2-Rp-NYy">
+                                <rect key="frame" x="0.0" y="562" width="414" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OAF-FO-yoL">
+                                        <rect key="frame" x="207" y="10" width="207" height="280"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OAF-FO-yoL" secondAttribute="bottom" constant="10" id="Z6B-qz-0lB"/>
+                                    <constraint firstAttribute="height" constant="300" id="aws-g5-aT2"/>
+                                    <constraint firstItem="OAF-FO-yoL" firstAttribute="top" secondItem="xO2-Rp-NYy" secondAttribute="top" constant="10" id="eGz-5r-IJH"/>
+                                    <constraint firstAttribute="trailing" secondItem="OAF-FO-yoL" secondAttribute="trailing" id="fbn-lB-wRv"/>
+                                    <constraint firstItem="OAF-FO-yoL" firstAttribute="width" secondItem="xO2-Rp-NYy" secondAttribute="width" multiplier="0.5" id="mxk-8h-epz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GG7-Ju-RnX"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GG7-Ju-RnX" firstAttribute="trailing" secondItem="xO2-Rp-NYy" secondAttribute="trailing" id="712-SX-n7a"/>
+                            <constraint firstItem="xO2-Rp-NYy" firstAttribute="leading" secondItem="GG7-Ju-RnX" secondAttribute="leading" id="VVZ-yh-Hum"/>
+                            <constraint firstItem="GG7-Ju-RnX" firstAttribute="bottom" secondItem="xO2-Rp-NYy" secondAttribute="bottom" id="ZNa-nP-nJv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gifImage" destination="OAF-FO-yoL" id="J1L-0r-1Fg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81t-zT-9CI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CaptureEntity" representedClassName="CaptureEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="datedAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fps" optional="YES" attributeType="String"/>
+        <attribute name="orientation" optional="YES" attributeType="String"/>
+        <attribute name="overlayUrl" optional="YES" attributeType="String"/>
+        <attribute name="publicUrl" optional="YES" attributeType="String"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="thumbnail" optional="YES" attributeType="Binary"/>
+        <attribute name="videoBinary" optional="YES" attributeType="Binary"/>
+        <attribute name="videoName" optional="YES" attributeType="String"/>
+        <attribute name="videoUrl" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ImageCaptureEntity" representedClassName="ImageCaptureEntity" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="dateAdded" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageBinary" optional="YES" attributeType="Binary"/>
+        <attribute name="imageLocalUrl" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="publicUrl" optional="YES" attributeType="String"/>
+    </entity>
+</model>
